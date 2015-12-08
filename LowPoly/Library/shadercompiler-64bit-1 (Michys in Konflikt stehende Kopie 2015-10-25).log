@@ -1,0 +1,73 @@
+Base path: X:/Program Files/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-3428
+Cmd: getPlatforms
+Cmd: preprocess
+  insize=1063 outsize=406 ok=1
+Cmd: preprocess
+  insize=928 outsize=289 ok=1
+Cmd: preprocess
+  insize=4159 outsize=1016 ok=1
+Cmd: preprocess
+  insize=1099 outsize=1373 ok=1
+Cmd: preprocess
+  insize=1097 outsize=289 ok=1
+Cmd: preprocess
+  insize=12815 outsize=2575 ok=1
+Cmd: preprocess
+  insize=2413 outsize=753 ok=1
+Cmd: preprocess
+  insize=883 outsize=277 ok=1
+Cmd: preprocess
+  insize=6131 outsize=973 ok=1
+Cmd: preprocess
+  insize=4770 outsize=1779 ok=1
+Cmd: preprocess
+  insize=11975 outsize=2457 ok=1
+Cmd: preprocess
+  insize=1802 outsize=527 ok=1
+Cmd: preprocess
+  insize=1530 outsize=277 ok=1
+Cmd: preprocess
+  insize=5171 outsize=737 ok=1
+Cmd: preprocess
+  insize=1013 outsize=1806 ok=1
+Cmd: preprocess
+  insize=3696 outsize=630 ok=1
+Cmd: preprocess
+  insize=880 outsize=1230 ok=1
+Cmd: preprocess
+  insize=650 outsize=290 ok=1
+Cmd: preprocess
+  insize=5006 outsize=866 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=982 outsize=3654 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_ON _EMISSION ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=982 outsize=5393 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _EMISSION VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=982 outsize=5751 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _EMISSION VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=982 outsize=3775 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _EMISSION ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=1152 outsize=763 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_ON _EMISSION ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1152 outsize=8180 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_ON _EMISSION ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=1152 outsize=2540 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_ON _EMISSION UNITY_HDR_ON ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=886 outsize=851 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _EMISSION ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=886 outsize=3654 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_ON _EMISSION ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=886 outsize=4012 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_ON _EMISSION ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=886 outsize=763 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_ON _EMISSION VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=886 outsize=6084 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _EMISSION VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=886 outsize=6175 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _EMISSION ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=886 outsize=6866 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _EMISSION ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=530 outsize=2224 kw=_EMISSION ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=530 outsize=2972 kw=_EMISSION ok=1
