@@ -14,7 +14,8 @@ public class FlyCam : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Screen.lockCursor = true;
+		//Screen.lockCursor = true;
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	// Update is called once per frame
@@ -52,7 +53,8 @@ public class FlyCam : MonoBehaviour {
 		
 		if (Input.GetKeyDown (KeyCode.End))
 		{
-			Screen.lockCursor = (Screen.lockCursor == false) ? true : false;
+			//Screen.lockCursor = (Screen.lockCursor == false) ? true : false;
+			Cursor.lockState = CursorLockMode.Locked;
 		}
 	}
 }

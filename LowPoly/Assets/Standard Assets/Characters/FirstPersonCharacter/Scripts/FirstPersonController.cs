@@ -28,12 +28,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private Vector2 m_Input;
         private Vector3 m_MoveDir = Vector3.zero;
         private CharacterController m_CharacterController;
-        private CollisionFlags m_CollisionFlags;
+//        private CollisionFlags m_CollisionFlags;
         private bool m_PreviouslyGrounded;
         private Vector3 m_OriginalCameraPosition;
         private float m_StepCycle;
         private float m_NextStep;
-        private bool m_Jumping;
+//        private bool m_Jumping;
         private AudioSource m_AudioSource;
 
 		public float cameraSensitivity = 90;
@@ -42,8 +42,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		public float slowMoveFactor = 0.25f;
 		public float fastMoveFactor = 3;
 		
-		private float rotationX = 0.0f;
-		private float rotationY = 0.0f;
+//		private float rotationX = 0.0f;
+//		private float rotationY = 0.0f;
 
         // Use this for initialization
         private void Start()
@@ -55,9 +55,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_HeadBob.Setup(m_Camera, m_StepInterval);
             m_StepCycle = 0f;
             m_NextStep = m_StepCycle/2f;
-            m_Jumping = false;
+ //           m_Jumping = false;
 			m_MouseLook.Init(transform , m_Camera.transform);
-			Screen.lockCursor = true;
+			//Screen.lockCursor = true;
+			Cursor.lockState = CursorLockMode.Locked;
         }
 
 
@@ -82,15 +83,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MoveDir.x = desiredMove.x*speed;
             m_MoveDir.z = desiredMove.z*speed;
 
-            m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
+ //           m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
 
 			RotateView();
 			
 			//rotationX += Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime;
 			//rotationY += Input.GetAxis("Mouse Y") * cameraSensitivity * Time.deltaTime;
 			
-			rotationX = transform.eulerAngles.x;
-			rotationY = transform.eulerAngles.y;
+//			rotationX = transform.eulerAngles.x;
+//			rotationY = transform.eulerAngles.y;
 			
 			//rotationY = Mathf.Clamp (rotationY, -90, 90);
 			
@@ -119,7 +120,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			
 			if (Input.GetKeyDown (KeyCode.End))
 			{
-				Screen.lockCursor = (Screen.lockCursor == false) ? true : false;
+//				Screen.lockCursor = (Screen.lockCursor == false) ? true : false;
+				Cursor.lockState = CursorLockMode.Locked;
 			}
 
 
