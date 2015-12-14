@@ -1,15 +1,29 @@
 fileFormatVersion: 2
-guid: 02dd0bd1c91cf2547a78ea907d8d7846
-timeCreated: 1448285319
+guid: a7acb420d5687fb42bc88df1649becb2
+timeCreated: 1450087719
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Icosphere
+    100000: Camera
+    100002: Cloud02a
+    100004: Cloud02a.001
+    100006: //RootNode
+    100008: Lamp
+    400000: Camera
+    400002: Cloud02a
+    400004: Cloud02a.001
+    400006: //RootNode
+    400008: Lamp
+    2300000: Cloud02a
+    2300002: Cloud02a.001
+    2300004: //RootNode
+    3300000: Cloud02a
+    3300002: Cloud02a.001
+    3300004: //RootNode
+    4300000: Cloud02a.001
+    4300002: Cloud02a
+    4300004: Cloud02b
   materials:
     importMaterials: 1
     materialName: 0
@@ -33,7 +47,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 3
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
