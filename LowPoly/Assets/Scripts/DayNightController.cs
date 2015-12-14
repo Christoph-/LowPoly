@@ -74,12 +74,12 @@ public class DayNightController : MonoBehaviour {
 		{
 
 			if(r < 1.0f/255.0f*94.0f)
-				r += 94.0f/200.0f;
+				r += 94.0f/20000.0f;
 			if(g < 1.0f/255.0f*118.0f)
-				g += 118.0f/200.0f;
+				g += 118.0f/20000.0f;
 			if(b < 1.0f/255.0f*156.0f)
-				b += 156.0f/200.0f;
-			
+				b += 156.0f/20000.0f;
+			Debug.Log (1.0f/255.0f*94.0f + ":" + 1.0f/255.0f*118.0f + ":"  + 1.0f/255.0f*156.0f);
 			RenderSettings.fogColor = new Color(r,g,b,a);
 			RenderSettings.fog = true;
 		}
@@ -93,11 +93,11 @@ public class DayNightController : MonoBehaviour {
 
 			//NightTime, darken fogcolor
 			if(r > 0.0f)
-				r -= 94.0f/200.0f;
+				r -= 94.0f/20000.0f;
 			if(g > 0.0f)
-				g -= 118.0f/200.0f;
+				g -= 118.0f/20000.0f;
 			if(b > 0.0f)
-				b -= 156.0f/200.0f;
+				b -= 156.0f/20000.0f;
 
 			RenderSettings.fogColor = new Color(r,g,b,a);
 			RenderSettings.fog = true;
