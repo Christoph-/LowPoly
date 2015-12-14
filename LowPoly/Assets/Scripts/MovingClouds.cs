@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MovingClouds : MonoBehaviour {
 
-	public float speed = 1f;
+	public float speed = 1.0f;
 	float x,y,z;
 
 
@@ -19,6 +19,11 @@ public class MovingClouds : MonoBehaviour {
 		x = x + speed * Time.deltaTime;
 		transform.position = new Vector3 (x, y, z);
 		//Debug.Log (Time.deltaTime);
+
+		if (x >= 256.0f)
+		{
+			Destroy (gameObject);
+		}
 	}
 
 }

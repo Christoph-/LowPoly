@@ -10,7 +10,8 @@ public class DayNightController : MonoBehaviour {
     // The number of real-world seconds in one full game day.
     // Set this to 86400 for a 24-hour realtime day.
     public float secondsInFullDay = 120f;
-	Color dayColor =  new Color(0.7f,0.9f,1f,1f);
+	public Color waterColor =  new Color(0.12f,0.12f,0.12f,0.5f);
+	public float r = 0.0f, g = 0.0f, b = 0.0f, a = 0.0f;
 
     // The value we use to calculate the current time of day.
     // Goes from 0 (midnight) through 0.25 (sunrise), 0.5 (midday), 0.75 (sunset) to 1 (midnight).
@@ -65,12 +66,41 @@ public class DayNightController : MonoBehaviour {
         // Also with some more clever code you can have different lengths for the day and
         // night as well.
 
+		// The value we use to calculate the current time of day.
+		// Goes from 0 (midnight) through 0.25 (sunrise), 0.5 (midday), 0.75 (sunset) to 1 (midnight).
+
+		//DayTime, lightup fogcolor
+		if (currentTimeOfDay > 0.23f && currentTimeOfDay < 0.75f) 
+		{
+
+			if(r < 1.0f/255.0f*94.0f)
+				r += 94.0f/200.0f;
+			if(g < 1.0f/255.0f*118.0f)
+				g += 118.0f/200.0f;
+			if(b < 1.0f/255.0f*156.0f)
+				b += 156.0f/200.0f;
+			
+			RenderSettings.fogColor = new Color(r,g,b,a);
+			RenderSettings.fog = true;
+		}
+
         // The sun is full intensity during the day.
         float intensityMultiplier = 1;
         // Set intensity to 0 during the night night.
         if (currentTimeOfDay <= 0.23f || currentTimeOfDay >= 0.75f) {
             intensityMultiplier = 0.1f;
 			//waterMaterial.SetColor ("_BaseColor", Color.black);
+
+			//NightTime, darken fogcolor
+			if(r > 0.0f)
+				r -= 94.0f/200.0f;
+			if(g > 0.0f)
+				g -= 118.0f/200.0f;
+			if(b > 0.0f)
+				b -= 156.0f/200.0f;
+
+			RenderSettings.fogColor = new Color(r,g,b,a);
+			RenderSettings.fog = true;
         }
         // Fade in the sun when it rises.
         else if (currentTimeOfDay <= 0.25f) {
@@ -82,11 +112,13 @@ public class DayNightController : MonoBehaviour {
             // a perfect fade.
             intensityMultiplier = Mathf.Clamp01((currentTimeOfDay - 0.23f) * (1 / 0.02f));
 			//waterMaterial.SetColor ("_BaseColor", dayColor);
+
         }
         // And fade it out when it sets.
         else if (currentTimeOfDay >= 0.73f) {
             intensityMultiplier = Mathf.Clamp01(1 - ((currentTimeOfDay - 0.73f) * (1 / 0.02f)));
 			//waterMaterial.SetColor ("_BaseColor", Color.blue);
+			//waterMaterial.SetColor ("_BaseColor", waterColor);
         }
 
         // Multiply the intensity of the sun according to the time of day.

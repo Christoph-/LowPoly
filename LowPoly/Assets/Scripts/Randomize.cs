@@ -3,19 +3,26 @@ using System.Collections;
 
 public class Randomize : MonoBehaviour {
 		 
-
+	float scaleFactor = 100.0f;
+	float scaleFactorCloud = 2.0f;
+	float scaleFactorTree = 0.4f;
 	// Use this for initialization
 	void Start () {
+
+
 		//transform.eulerAngles  = new Vector3(0, Random.Range (0.0f, 360f), 0);
 		if (gameObject.tag == "Cloud") {
-			transform.Rotate (Random.Range (0, 360), Random.Range (0, 360), Random.Range (0, 360));
-			transform.localScale = new Vector3(Random.Range (2000.0f, 2500.0f), Random.Range (2000.0f, 2500.0f), Random.Range (2000.0f, 2500.0f));
+
+			StartCoroutine (Wait ());
+
+			transform.Rotate (270,270,180);
+			//transform.Rotate (Random.Range (0, 360), Random.Range (0, 360), Random.Range (0, 360));
 			Debug.Log ("Cloud");
 
 		}
 		if (gameObject.tag == "Tree") {
 			transform.Rotate (0, Random.Range (0, 360), 0);
-			transform.localScale = new Vector3(Random.Range (0.8f, 1.4f), Random.Range (1.0f, 1.4f), Random.Range (0.8f, 1.4f));
+			transform.localScale = new Vector3(Random.Range (scaleFactorTree, scaleFactorTree*2), Random.Range (scaleFactorTree, scaleFactorTree*2), Random.Range (scaleFactorTree, scaleFactorTree*2));
 			Debug.Log ("Tree");
 			
 		}
@@ -27,8 +34,14 @@ public class Randomize : MonoBehaviour {
 		}
 	}
 
-	// Update is called once per frame
-	void Update () {
-	
+	IEnumerator Wait ()
+	{
+		scaleFactorCloud = Random.Range (192, 384);
+		for(scaleFactor = 1.0f; scaleFactor < scaleFactorCloud; scaleFactor += 1f)
+		{				
+			transform.localScale = new Vector3(scaleFactor*2,scaleFactor*4, scaleFactor*2);
+			yield return new WaitForSeconds (0.0f);
+		}
+
 	}
 }
