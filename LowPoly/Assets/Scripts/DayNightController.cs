@@ -6,12 +6,12 @@ public class DayNightController : MonoBehaviour {
     // The directional light which we manipulate as our sun.
     public Light sun;
 	public GameObject water;
-	public Material waterMaterial;
+	public Material waterMaterial, starMaterial;
     // The number of real-world seconds in one full game day.
     // Set this to 86400 for a 24-hour realtime day.
     public float secondsInFullDay = 120f;
 	public Color waterColor =  new Color(0.12f,0.12f,0.12f,0.5f);
-	public float r = 0.0f, g = 0.0f, b = 0.0f, a = 0.0f;
+	public float r = 94.0f, g = 118.0f, b = 156.0f, a = 0.0f;
 
     // The value we use to calculate the current time of day.
     // Goes from 0 (midnight) through 0.25 (sunrise), 0.5 (midday), 0.75 (sunset) to 1 (midnight).
@@ -69,16 +69,25 @@ public class DayNightController : MonoBehaviour {
 		// The value we use to calculate the current time of day.
 		// Goes from 0 (midnight) through 0.25 (sunrise), 0.5 (midday), 0.75 (sunset) to 1 (midnight).
 
+		float fogChangeSpeed = 1000 * secondsInFullDay;
+
 		//DayTime, lightup fogcolor
 		if (currentTimeOfDay > 0.23f && currentTimeOfDay < 0.75f) 
 		{
 
 			if(r < 1.0f/255.0f*94.0f)
-				r += 94.0f/20000.0f;
+				r += 94.0f/fogChangeSpeed;
 			if(g < 1.0f/255.0f*118.0f)
-				g += 118.0f/20000.0f;
+				g += 118.0f/fogChangeSpeed;
 			if(b < 1.0f/255.0f*156.0f)
-				b += 156.0f/20000.0f;
+				b += 156.0f/fogChangeSpeed;
+			if(a > 0.0f)
+				a -= 1.0f / secondsInFullDay ;
+			
+			//starMaterial.color = new Color (1.0f,1.0f, 1.0f, a);
+			Color starColor =  new Color(1.0f,1.0f,1.0f,a);
+			starMaterial.SetColor("_TintColor", starColor);
+
 			Debug.Log (1.0f/255.0f*94.0f + ":" + 1.0f/255.0f*118.0f + ":"  + 1.0f/255.0f*156.0f);
 			RenderSettings.fogColor = new Color(r,g,b,a);
 			RenderSettings.fog = true;
@@ -93,11 +102,16 @@ public class DayNightController : MonoBehaviour {
 
 			//NightTime, darken fogcolor
 			if(r > 0.0f)
-				r -= 94.0f/20000.0f;
+				r -= 94.0f/fogChangeSpeed;
 			if(g > 0.0f)
-				g -= 118.0f/20000.0f;
+				g -= 118.0f/fogChangeSpeed;
 			if(b > 0.0f)
-				b -= 156.0f/20000.0f;
+				b -= 156.0f/fogChangeSpeed;
+			if(a < 1.0f)
+				a += 0.1f / secondsInFullDay;	
+			//starMaterial.color = new Color (1.0f,1.0f, 1.0f, a);
+			Color starColor =  new Color(1.0f,1.0f,1.0f,a);
+			starMaterial.SetColor("_TintColor", starColor);
 
 			RenderSettings.fogColor = new Color(r,g,b,a);
 			RenderSettings.fog = true;

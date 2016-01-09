@@ -3,8 +3,8 @@ using System.Collections;
 
 public class CloudSpawner : MonoBehaviour {
 
-	public GameObject Cloud, Cloud2 , Cloud3;
-
+	public GameObject Cloud, Cloud2 , Cloud3, Star;
+	
 	// Use this for initialization
 	void Start () {
 		StartCoroutine (SpawnCloud ());
@@ -17,6 +17,12 @@ public class CloudSpawner : MonoBehaviour {
 		}
 		for (int i = 0; i < 20; i++) {
 			Instantiate (Cloud3, transform.position = new Vector3 (Random.Range (-256, 256), Random.Range (96, 128), Random.Range (-256, 256)), Cloud3.transform.rotation);
+		}
+
+		int area = 1024;
+
+		for (int i = 0; i < 2000; i++) {
+			Instantiate (Star, transform.position = new Vector3 (Random.Range (-area, area), 192, Random.Range (-area, area)), Star.transform.rotation);
 		}
 	}
 		
