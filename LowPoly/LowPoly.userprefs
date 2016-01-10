@@ -1,17 +1,10 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DayNightController.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Sun.cs">
     <Files>
-      <File FileName="LowPoly.sln" Line="52" Column="7" />
-      <File FileName="Assets\Scripts\CloudSpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\DayNightController.cs" Line="99" Column="37" />
-      <File FileName="Assets\Scripts\FlyCam.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TimeStop.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Clock.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MovingClouds.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Environment\Water\Water\Scripts\PlanarReflection.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Randomize.cs" Line="50" Column="29" />
+      <File FileName="Assets/Scripts/RotatingSun.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Sun.cs" Line="4" Column="15" />
+      <File FileName="Assets/Scripts/DayNightController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
