@@ -4,8 +4,8 @@ using System.Collections;
 public class DayNightController : MonoBehaviour {
 
     // The directional light which we manipulate as our sun.
-    public Light sun;
-	public GameObject water;
+	public Light sun, moonLight;
+	public GameObject water, moonSphere;
 	public Material waterMaterial, starMaterial;
     // The number of real-world seconds in one full game day.
     // Set this to 86400 for a 24-hour realtime day.
@@ -25,9 +25,10 @@ public class DayNightController : MonoBehaviour {
     public float timeMultiplier = 1f;
 
     // Get the initial intensity of the sun so we remember it.
-    float sunInitialIntensity;
+	float sunInitialIntensity, moonLightInitialIntensity;
     void Start() {
         sunInitialIntensity = sun.intensity;
+		moonLightInitialIntensity = moonLight.intensity;
 
 		//float lerp = Mathf.PingPong(Time.time, 1.0f) / 1.0f;
 		//water.GetComponent<Renderer>().material.color = Color.Lerp(Color.green, Color.green, lerp);
@@ -59,6 +60,9 @@ public class DayNightController : MonoBehaviour {
         // The y-axis determines where on the horizon the sun will rise and set.
         // The z-axis does nothing.
         sun.transform.localRotation = Quaternion.Euler((currentTimeOfDay * 360f) - 90, 170, 0);
+		moonLight.transform.localRotation = Quaternion.Euler((currentTimeOfDay * 360f) -90, -170, 0);
+		moonSphere.transform.localRotation = Quaternion.Euler((currentTimeOfDay * 360f) -90, -170, 0);
+		moonSphere.transform.RotateAround (Vector3.zero, Vector3.right, currentTimeOfDay);
 
         // The following determines the sun's intensity according to current time of day.
         // You'll notice I have hardcoded a bunch of values here. They were just the values
