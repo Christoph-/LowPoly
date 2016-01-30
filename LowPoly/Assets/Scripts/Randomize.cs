@@ -14,15 +14,13 @@ public class Randomize : MonoBehaviour {
 	void Start () {
 
 
-		//transform.eulerAngles  = new Vector3(0, Random.Range (0.0f, 360f), 0);
 		if (gameObject.tag == "Cloud") {
-
-			StartCoroutine (Wait ());
 
 			transform.Rotate (270,270,180);
 			//transform.Rotate (Random.Range (0, 360), Random.Range (0, 360), Random.Range (0, 360));
 			Debug.Log ("Cloud");
 
+			StartCoroutine (Wait ()); 
 		}
 		if (gameObject.tag == "Tree") {
 			transform.Rotate (0, Random.Range (0, 360), 0);
@@ -34,8 +32,8 @@ public class Randomize : MonoBehaviour {
 			transform.Rotate (Random.Range (0, 360), Random.Range (0, 360), Random.Range (0, 360));
 			transform.localScale = new Vector3(Random.Range (100.0f, 200.0f), Random.Range (100.0f, 200.0f), Random.Range (100.0f, 200.0f));
 			Debug.Log ("Stone");
-			
-		}
+
+			}
 	}
 
 	IEnumerator Wait ()

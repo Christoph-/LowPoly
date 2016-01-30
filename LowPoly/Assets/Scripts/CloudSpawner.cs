@@ -7,7 +7,7 @@ public class CloudSpawner : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		StartCoroutine (SpawnCloud ());
+		//StartCoroutine (SpawnCloud ()); //Erstmal deaktiviert wegen Transparenz
 
 		for (int i = 0; i < 20; i++) {
 			Instantiate (Cloud, transform.position = new Vector3 (Random.Range (-256, 256), Random.Range (96, 128), Random.Range (-256, 256)), Cloud.transform.rotation);

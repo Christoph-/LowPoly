@@ -6,10 +6,40 @@ ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Camera
+    100004: Cylinder
+    100006: Lamp
+    100008: Plane
+    100010: Plane_MeshPart0
+    100012: Plane_MeshPart1
+    100014: WaterFall
+    100016: WaterFallSplit
     400000: //RootNode
+    400002: Camera
+    400004: Cylinder
+    400006: Lamp
+    400008: Plane
+    400010: Plane_MeshPart0
+    400012: Plane_MeshPart1
+    400014: WaterFall
+    400016: WaterFallSplit
     2300000: //RootNode
+    2300002: Cylinder
+    2300004: Plane_MeshPart0
+    2300006: Plane_MeshPart1
+    2300008: WaterFall
+    2300010: WaterFallSplit
     3300000: //RootNode
+    3300002: Cylinder
+    3300004: Plane_MeshPart0
+    3300006: Plane_MeshPart1
+    3300008: WaterFall
+    3300010: WaterFallSplit
     4300000: WaterFall
+    4300002: WaterFallSplit
+    4300004: Cylinder
+    4300006: Plane_MeshPart0
+    4300008: Plane_MeshPart1
   materials:
     importMaterials: 1
     materialName: 0
