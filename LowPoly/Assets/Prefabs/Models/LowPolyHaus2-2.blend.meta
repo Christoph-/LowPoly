@@ -1,0 +1,111 @@
+fileFormatVersion: 2
+guid: 8e6bf6f44600244da904ba4aee72d75d
+timeCreated: 1454154714
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Dach
+    100002: Fenster
+    100004: Haus
+    100006: Holz
+    100008: //RootNode
+    100010: Schuppen
+    100012: T_r
+    400000: Dach
+    400002: Fenster
+    400004: Haus
+    400006: Holz
+    400008: //RootNode
+    400010: Schuppen
+    400012: T_r
+    2300000: Dach
+    2300002: Fenster
+    2300004: Haus
+    2300006: Holz
+    2300008: Schuppen
+    2300010: T_r
+    3300000: Dach
+    3300002: Fenster
+    3300004: Haus
+    3300006: Holz
+    3300008: Schuppen
+    3300010: T_r
+    4300000: Holz
+    4300002: T_r
+    4300004: Fenster
+    4300006: Dach
+    4300008: Schuppen
+    4300010: Haus
+    6400000: Dach
+    6400002: Fenster
+    6400004: Haus
+    6400006: Holz
+    6400008: Schuppen
+    6400010: T_r
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
