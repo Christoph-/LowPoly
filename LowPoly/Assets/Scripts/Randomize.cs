@@ -44,8 +44,8 @@ public class Randomize : MonoBehaviour {
 			scaleFactorOld += 0.5f;
 			transform.localScale = new Vector3(scaleFactor*2,scaleFactor*4, scaleFactor*2);
 
-			cloudMaterial.color = new Color (1.0f,1.0f, 1.0f, cloudTransparency);
-			cloudTransparency += 0.02f;
+			//cloudMaterial.color = new Color (1.0f,1.0f, 1.0f, cloudTransparency);
+			//cloudTransparency += 0.02f;
 
 			yield return new WaitForSeconds (0.0f);
 		}
